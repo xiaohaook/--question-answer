@@ -1,0 +1,18 @@
+{{include '../shared/header'}}
+<form  enctype="multipart/form-data" action="/user/photo" method="post">
+			<input type="file" name="photo" id="photo" accept="image/*"/>
+			<input type="submit" value="上传" /><br />
+			x:<input type="text" name="x" id="x" value="" />
+			y:<input type="text" name="y" id="y" value="" />
+			w:<input type="text" name="w" id="w" value="" />
+			h:<input type="text" name="h" id="h" value="" />
+			scale:<input type="text" name="scale" id="scale" value="" />
+		</form>
+		<div class="img-box">
+			<div class="cut">
+		   </div>
+		</div>
+<script src="/libs/jquery.js"></script>
+<script src="/js/user/upload.js"></script>
+<script src="/libs/bootstrap.min.js"></script>
+{{include '../shared/footer'}}

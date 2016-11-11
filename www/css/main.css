@@ -1,0 +1,168 @@
+body {
+	padding-top: 60px;
+}
+
+h4 {
+	font-size: normal;
+	margin: 5px;
+}
+
+.nav {
+	min-width: 600px;
+}
+
+.container {
+	min-width: 600px;
+}
+
+.quest-pic {
+	width: 50px;
+	height: 50px;
+	margin-top: -25px;
+	border-radius: 50%;
+}
+
+.answer-pic {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.quest-text {
+	cursor: pointer;
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+.answer-text {
+	color: blue;
+}
+
+.quest-mess {
+	display: inline-block;
+}
+
+.answer-mess {
+	text-align: right;
+}
+
+.panel-body,
+.panel-heading {
+	position: relative;
+}
+
+.panel-body:hover,
+.panel-heading:hover {
+	background-color: gainsboro;
+}
+
+.quest-btns {
+	margin-top: 5px;
+}
+
+.answer-delete {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+}
+
+.zan {
+	background-color: blue;
+	color: white;
+}
+
+
+/*-------------ask.css-------------------*/
+
+li.selected {
+	background-color: red;
+	color: white;
+}
+.answer-keyword>li{
+    display: inline-block;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.answer-keyword>li:hover{
+    background-color:red; 
+}
+/*-------------upload.css-------------------*/
+
+.cut {
+	position: absolute;
+	border: 1px dashed;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.img-box {
+	margin: 20px;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#x,
+#h,
+#y,
+#w,
+#scale {
+	width: 40px;
+	margin-right: 10px;
+}
+
+/*-----------------register.css---------------------*/
+.register-box{
+	padding: 20px
+}
+.register-box input{
+	margin: 10px;
+	height: 30px;
+	width:100%;
+	text-align: center;
+}
+
+/*-----------------signin.css---------------------*/
+.signin-box{
+	padding: 20px
+}
+.signin-box input{
+	margin: 10px;
+	height: 30px;
+	width:100%;
+	text-align: center;
+}
+
+
+/*-------------------ws.css-------------------*/
+
+#chatBox {
+	height: 400px;
+	overflow: auto;
+	border: solid 2px black;
+	margin: 10px auto;
+	width: 80%;
+	min-width: 400px;
+	text-align: left;
+}
+
+#msgBox {
+	margin: 10px auto;
+	height: 30px;
+	width: 65%;
+	min-width: 300px;
+}
+
+.chat {
+	max-width: 50%;
+	border: solid 2px black;
+	display: inline-block;
+	margin: 5px 50px;
+	word-break: break-all
+}
+
+.chat-btn{
+	text-align: center;
+}

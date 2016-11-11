@@ -1,0 +1,20 @@
+{{include 'shared/header'}}
+<div class="container">
+	
+	<div class="answer-keyword">
+		<h3>关键词：</h3>
+		{{each keywords as kw i}}
+		<li index="{{kw.id}}">{{kw.text}}</li>
+		{{/each}}
+	</div>
+	<a href="javascript:addKeyword()">添加关键词</a>
+	<form action="#">
+		<textarea name="text" cols="80" rows="10"></textarea><br>
+		<input type="submit" value="提交问题">
+	</form>
+</div>
+<script src="/libs/jquery.js"></script>
+<script src="/libs/jquery.cookie.js"></script>
+<script src="/js/ask.js"></script>
+<script src="/libs/bootstrap.min.js"></script>
+{{include 'shared/footer'}}

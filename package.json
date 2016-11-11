@@ -1,0 +1,20 @@
+{
+  "name": "zyqa",
+  "version": "0.0.1",
+  "description": "以问答方式总结所学知识",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server"
+  },
+  "author": "常伟",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^3.0.3",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "gm": "^1.23.0",
+    "mongoose": "^4.6.0",
+    "ws": "^1.1.1"
+  }
+}

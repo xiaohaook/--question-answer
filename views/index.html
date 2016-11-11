@@ -1,0 +1,68 @@
+{{include 'shared/header'}}
+<ul class="keyword">
+	<h4>关键词：</h4> {{each keywords as kw i}}
+	<li class="{{ keyword == kw.text ? 'selected' : ''}}" style="display: inline-table;margin: 5px;">
+		<a href="/k-{{kw.text}}">{{kw.text}}</a>
+	</li>
+	{{/each}}
+</ul>
+<hr>
+<section class="container">
+	{{each questions as q i}}
+	<div class="panel panel-default question">
+		<div class="panel-heading">
+			<img src="{{q.createUser.photo}}" class="quest-pic" />
+			<span class="quest-mess">{{q.createUser.account}} <br />
+			<li class="{{ keyword == q.keyword ? 'selected' : ''}}" style="display: inline-table">
+		        <a href="/k-{{q.keyword}}">{{q.keyword}}</a>
+	       </li>，{{q.createTime | formatTime}}</span>
+			<h3 index="{{q.id}}" class="panel-title quest-text">{{q.text}}</h3>
+			<div class="quest-btns">
+				<button class="quest-apply" index="{{q.id}}">回答</button>
+				<button class="quest-zan" index="{{q.id}}">赞</button >
+				{{if account==q.createUser.account}}
+				<button  class="quest-delete" index="{{q.id}}">删除</button >
+				{{/if}}
+			</div>
+			<div class="zan-man">
+				{{each q.zan as z i}}
+				<span class="{{z.createUser.account}}" index="{{q.id}}">{{z.createUser.account}}</span>
+			    {{/each}}
+			</div>
+		</div>
+		{{each q.answers as a i}}
+		<div class="answer panel-body">
+			<h5 class="answer-text">{{a.text}}</h5>
+			<p class="answer-mess">
+				<img src="{{a.createUser.photo}}" class="answer-pic" /> {{a.createUser.account}}， {{a.createTime | formatTime}}</p>
+			{{if account==a.createUser.account}}
+			<span class="answer-delete" index="{{a._id.toString()}}">删除</span>
+			{{/if}}
+		</div>
+		{{/each}}
+	</div>
+	{{/each}}
+	<nav style="text-align: center;">
+	<ul class="pagination">
+		<li {{if pageNow==1 }} class="disabled" {{/if}}>
+			<a{{if pageNow>1}} href="/?page={{pageNow-1}}" {{/if}} >
+				<span>&laquo;</span>
+			</a>
+		</li>
+		{{each pages as p i}}
+		<li {{if p==pageNow}} class="active" {{/if}}>
+			<a href="/?page={{p}}">{{p}}</a>
+		</li>
+		{{/each}}
+		<li {{if pageNow==pageNum}} class="disabled" {{/if}}>
+			<a {{if pageNow<pageNum}} href="/?page={{pageNow+1}}" {{/if}}><span>&raquo;</span></a>
+		</li>
+	</ul>
+</nav>
+</section>
+
+<script src="/libs/jquery.js"></script>
+<script src="/libs/jquery.cookie.js"></script>
+<script src="/js/index.js"></script>
+<script src="/libs/bootstrap.min.js"></script>
+{{include 'shared/footer'}}
